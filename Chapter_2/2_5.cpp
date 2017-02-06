@@ -5,7 +5,7 @@
 **
 ** Challenge: A car holds 16 gallons of gasoline and can travel 312
 ** miles before refueling. Write a program that calculates the number
-** of miles per gallon the car gets. Display the results on scree.
+** of miles per gallon the car gets. Display the results on screen.
 *********************************************************************/
 #include <iostream>
 
