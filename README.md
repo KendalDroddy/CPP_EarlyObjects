@@ -8,3 +8,5 @@ This is a project which will supplement my studies as a full-time software engin
 Chapter 1: Completed on February 4, 2017
 
 Chapter 2: Completed on February 7, 2017
+
+Chapter 3: In Progress
