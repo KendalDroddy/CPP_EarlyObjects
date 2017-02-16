@@ -24,15 +24,25 @@ int main()
     switch (number)
     {
       case 1: std::cout << "The Roman number for 1 is: I" << std::endl;
-      case 2: std::cout << "The Roman number for 1 is: II" << std::endl;
-      case 3: std::cout << "The Roman number for 1 is: III" << std::endl;
-      case 4: std::cout << "The Roman number for 1 is: VI" << std::endl;
-      case 5: std::cout << "The Roman number for 1 is: V" << std::endl;
-      case 6: std::cout << "The Roman number for 1 is: VI" << std::endl;
-      case 7: std::cout << "The Roman number for 1 is: VII" << std::endl;
-      case 8: std::cout << "The Roman number for 1 is: VIII" << std::endl;
-      case 9: std::cout << "The Roman number for 1 is: IX" << std::endl;
-      case 10: std::cout << "The Roman number for 1 is: X" << std::endl;
+        break;
+      case 2: std::cout << "The Roman number for 2 is: II" << std::endl;
+        break;
+      case 3: std::cout << "The Roman number for 3 is: III" << std::endl;
+        break;
+      case 4: std::cout << "The Roman number for 4 is: VI" << std::endl;
+        break;
+      case 5: std::cout << "The Roman number for 5 is: V" << std::endl;
+        break;
+      case 6: std::cout << "The Roman number for 6 is: VI" << std::endl;
+        break;
+      case 7: std::cout << "The Roman number for 7 is: VII" << std::endl;
+        break;
+      case 8: std::cout << "The Roman number for 8 is: VIII" << std::endl;
+        break;
+      case 9: std::cout << "The Roman number for 9 is: IX" << std::endl;
+        break;
+      case 10: std::cout << "The Roman number for 10 is: X" << std::endl;
+        break;
     }
   else
   {
