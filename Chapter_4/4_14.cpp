@@ -29,16 +29,19 @@ int main()
   std::getline(std::cin, date1);
   std::cout << "Enter the height of this vault: ";
   std::cin >> vault1;
+  std::cin.ignore();
 
   std::cout << "Type the date of the second vault: ";
   std::getline(std::cin, date2);
   std::cout << "Enter the height of this vault: ";
   std::cin >> vault2;
+  std::cin.ignore();
 
   std::cout << "Type the date of the third vault: ";
   std::getline(std::cin, date3);
   std::cout << "Enter the height of this vault: ";
   std::cin >> vault3;
+  std::cin.ignore();
 
   //Compare vaults and display results in descending order by height
   if (vault1 > vault2 && vault1 > vault3)
