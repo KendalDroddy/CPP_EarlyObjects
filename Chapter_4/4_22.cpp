@@ -57,7 +57,7 @@ int main()
                "*     Monthly Bill    *\n"
                "***********************" << std::endl;
   std::cout << "* Name: " << name << std::endl;
-  std::cout << "* Minutes Used: " << name << std::endl;
+  std::cout << "* Minutes Used: " << minutes << std::endl;
 
   //Format output
   std::cout << std::fixed << std::showpoint << std::setprecision(2);
