@@ -28,11 +28,11 @@ int main()
   {
     std::cout << "Enter days worked this month: ";
     std::cin >> days;
-  }while(days < 1 || days > 31);
+  }while(days < 1 || days > 31); 
 
   //Generate and display results
-  std::cout  << "\n " << "Day    Daily Pay   Total" << std::endl;
-  std::cout  << " " << "------------------------" << std::endl;
+  std::cout  << "\n " << "Day     Daily Pay          Total" << std::endl;
+  std::cout  << " " << "-----------------------------------" << std::endl;
 
   for (int i = 1; i <= days; ++i)
   {
@@ -40,9 +40,9 @@ int main()
 
     //Display two decimal places
     std::cout << std::fixed << std::showpoint << std::setprecision(2); 
-    std::cout << std::setw(3) << i << std::setw(8) << "$" << std::setw(3) << penny 
-    << std::setw(6) << "$" << std::setw(3) << total << std::endl;
+    std::cout << std::setw(3) << i << std::setw(5) << "$" << std::setw(11) << penny 
+    << std::setw(6) << "$" << std::setw(11) << total << std::endl;
 
-    penny += .01; //Increment penny
+    penny *= 2; //Increment penny
   }
 }
