@@ -36,7 +36,6 @@ int main()
                 "----------------------------------------" << std::endl;
 
   //Get user's guess and loop until guess == value
-  
   do
   {
     std::cout << "Enter your guess: ";
@@ -51,7 +50,7 @@ int main()
     }
   }while(guess != value);
 
-//Program header
+//Congratulation message
   std::cout <<"-----------------------------------------\n"
                 "* Congrulations! You guessed my number! *\n"
                 "-----------------------------------------" << std::endl;
