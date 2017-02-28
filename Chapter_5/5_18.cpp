@@ -17,13 +17,21 @@
 
 int main()
 { 
-  //Initialize constant
-  double const PI = 3.14159;
-
   //Define variables
-  int    choice,
-         numOne,
-         numTwo;
+  unsigned seed;
+  int      choice,
+           randomOne,
+           randomTwo,
+           userAnswer,
+           correctAnswer;
+
+  //Use time function to seed srand
+  seed = time(0);
+  srand(seed);
+
+  //Generate random numbers between 10 and 50 and solution
+  randomOne = rand() % (50 - 10 + 1) + 10;
+  randomTwo = rand() % (50 - 10 + 1) + 10;
 
   //Loop the entire program
   do
@@ -40,30 +48,39 @@ int main()
     std::cout << "Enter your choice (1 - 4): ";
     std::cin >> choice;
     
-
+    //Display problem to user only if choice is 1-3
+    if (choice > 0 && choice < 4)
+    {
+      std::cout << "Please solve the following problem: " << std::endl;
+      std::cout << " " << randomOne << std::endl;
+    }
+    
     //Switch statement based on user input
     switch(choice)
     {
-      case 1: std::cout << "Enter the first number: "; //Addition problem
-              std::cin >> numOne;
-              std::cout << "Enter the second number: ";
-              std::cin >> numTwo;
-              std::cout << "The sum of these numbers is: " << numOne + numTwo << std::endl;
+      case 1: std::cout << "+" << randomTwo << std::endl;
+              correctAnswer = randomOne + randomTwo; //Addition problem
               break;
-      case 2: std::cout << "Enter the first number: "; //Subtraction problem
-              std::cin >> numOne;
-              std::cout << "Enter the second number: ";
-              std::cin >> numTwo;
-              std::cout << "The difference of these numbers is: " << numOne - numTwo << std::endl;
+      case 2: std::cout << "-" << randomTwo << std::endl;
+              correctAnswer = randomOne - randomTwo; //Subtraction problem
               break;
-      case 3: std::cout << "Enter the first number: "; //Multiplcation problem
-              std::cin >> numOne;
-              std::cout << "Enter the second number: ";
-              std::cin >> numTwo;
-              std::cout << "The product of these numbers is: " << numOne * numTwo << std::endl;
+      case 3: std::cout << "*" << randomTwo << std::endl;
+              correctAnswer = randomOne * randomTwo; //Multiplication problem
               break;
       case 4: std::cout << "Exiting the program." << std::endl; //Exit program
               return 0;
     }
+
+    //Get users response and display appropriate message
+    std::cout << "Enter your answer: ";
+    std::cin >> userAnswer;
+    if (userAnswer == correctAnswer)
+    {
+      std::cout << "Congratulations, that's the correct answer!" << std::endl;
+    }
+    else
+    {
+    std::cout << "The correct answer is: " << correctAnswer << std::endl;
+    } 
   }while(choice != 4);
 }
