@@ -10,7 +10,6 @@
 ** function by calling it in a loop that passes the values 1 through 
 ** 10 as arguments and displays the return value. The formula for
 ** falling distance is: d = .5(g)(t^2).
-
 *********************************************************************/
 #include <iostream>
 #include <iomanip>
