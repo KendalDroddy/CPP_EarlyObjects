@@ -14,15 +14,18 @@
 ** negative numbers for test scores.
 *********************************************************************/
 #include <iostream>
+#include <algorithm>
 
 //Function prototypes
-int testAverage(int[], int);
+int testAverage(int *test, int);
+
+void sortArray(int *test, int);
 
 int main()
 {
 	//Variables
 	int arraySize,
-	    *pArray;
+	    *pArray = nullptr;
 
 	//Get array size from user
 	std::cout << "How many scores do you need to enter: ";
@@ -42,8 +45,16 @@ int main()
 		}while(pArray[i] < 0);
 	}
 
+	//Sort values in array and display sorted values
+	sortArray(pArray, arraySize);
+
+	//Get test average and display results
 	int ave = testAverage(pArray, arraySize);
-	std::cout << ave << std::endl;
+	std::cout << "Average Score: " << ave << std::endl;
+
+	//Deallocate memory
+	delete [] pArray;
+	pArray = nullptr;
 }
 
 /*********************************************************************
@@ -64,4 +75,19 @@ int testAverage(int *array, int size)
 
 	average = total / size;
 	return average;
+}
+
+/*********************************************************************
+**                       testSort()
+** Accepts parameters of an array and array size, and sorts in
+** ascending order.
+*********************************************************************/
+void sortArray(int *array, int size)
+{	
+	std::sort(array, array + size);
+	for (int i = 0; i < size; ++i)
+	{
+		std::cout << "Score " << i + 1 << ": ";
+		std::cout << array[i] << std::endl;
+	}
 }
