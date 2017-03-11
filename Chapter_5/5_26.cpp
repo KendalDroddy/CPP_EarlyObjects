@@ -47,4 +47,7 @@ int main()
   std::cout << "\nDuring the months " << monthOne << "-" << monthTwo << " the total \n"
             << "rainfall was " << totalRain << " inches and the average \n"
             << "monthly rainfall was " << totalRain / months << " inches.\n" << std::endl;
+
+  //Close input file
+  inputFile.close();
 }
