@@ -49,4 +49,7 @@ int main()
   //Display results
   std::cout << "\nFirst student in line: " << firstStudent << std::endl;
   std::cout << "Last student in line: " << lastStudent << std::endl;
+
+  //Close input file
+  inputFile.close();
 }
