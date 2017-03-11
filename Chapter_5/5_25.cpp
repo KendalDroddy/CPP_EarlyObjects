@@ -14,6 +14,7 @@
 ** After the last iteration, display a report of the information.
 *********************************************************************/
 #include <iostream>
+#include <iomanip>
 
 int main()
 {
@@ -22,6 +23,9 @@ int main()
   			 monthlyBalance,
   			 monthlyWithdraw,
   			 totalBalance,
+  			 totalDeposits,
+  			 totalWithdraws,
+  			 totalInterest,
   			 monthlyInterest,
          annualRate,
          monthlyRate;
@@ -34,6 +38,7 @@ int main()
   //Get user input
   std::cout << "Enter your starting balance: $";
   std::cin >> startingBalance;
+  totalBalance += startingBalance;
   std::cout << "Enter your yearly interest rate: ";
   std::cin >> annualRate;
 
@@ -52,6 +57,8 @@ int main()
 
   	//Add monthly balance to total balance
   	totalBalance += monthlyBalance;
+  	totalDeposits += monthlyBalance;
+  	double temp = totalBalance;
 
   	//Get amount withdrawn this month - do not accept negative numbers
   	//or an amount larger than total balance
@@ -63,12 +70,23 @@ int main()
 
   	//Deduct withdraw amount from total balance
   	totalBalance -= monthlyWithdraw;
+  	totalWithdraws += monthlyWithdraw;
 
   	//Calculate interest for the month
-  	//monthlyInterest = monthlyBalance + (monthlyBalance )
-
-
-
-
+  	monthlyInterest = ((temp + totalBalance) / 2) * monthlyRate;
+  	totalBalance += monthlyInterest;
+  	totalInterest += monthlyInterest;
   }
+
+  //Report header
+  std::cout <<"\n----------------------------------------\n"
+                "*        Savings Account Report        *\n"
+                "----------------------------------------" << std::endl;
+  //Set output format
+  std::cout << std::fixed << std::showpoint << std::setprecision(2);
+  std::cout << "Starting balance: $" << startingBalance << std::endl;
+  std::cout << "Total deposits  : $" << totalDeposits << std::endl;
+  std::cout << "Total withdraws : $" << totalWithdraws << std::endl;
+  std::cout << "Total interest  : $" << totalInterest << std::endl;
+  std::cout << "Final balance   : $" << totalBalance << std::endl;
 }
