@@ -15,4 +15,6 @@ Chapter 4: Completed on February 21, 2017
 
 Chapter 5: Completed on March 11, 2017
 
-Chapter 6: In Progress...
+Chapter 6: Completed on March 28, 2017
+
+Chapter 7: In progress...
