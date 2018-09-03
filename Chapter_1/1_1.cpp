@@ -14,8 +14,8 @@
 int main()
 {
 	int candyBarsSold;
-	double earningsPerBar,
-		   totalEarnings;
+	float earningsPerBar,
+		    totalEarnings;
 
 	//Get bars sold
 	std::cout << "How many candy bars did your organization sell? ";
