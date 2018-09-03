@@ -32,7 +32,7 @@ int main()
     std::cout << "Enter the inches of rainfall for " << month2 << ": ";
     cin >> rain2;
     std::cout << "Enter the inches of rainfall for " << month3 << ": ";
-    cin >> rain2;
+    cin >> rain3;
 
     //Calculate and display results
     average = (rain1 + rain2 + rain3) / 3;
