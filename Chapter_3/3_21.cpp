@@ -40,7 +40,8 @@ int main()
 
   //Calculate results
   monthlyRate = annualRate / 12;
-  monthlyPayment = (((monthlyRate / 100) * std::pow(1 + (monthlyRate / 100), numberPayments)) / (std::pow(1 + (monthlyRate / 100), numberPayments) - 1)) * loanAmount;
+  monthlyPayment = (((monthlyRate / 100) * std::pow(1 + (monthlyRate / 100), numberPayments)) / 
+                   (std::pow(1 + (monthlyRate / 100), numberPayments) - 1)) * loanAmount;
   amountPaidBack = monthlyPayment * numberPayments;
   interestPaid = amountPaidBack - loanAmount;
   //Display results
@@ -51,6 +52,5 @@ int main()
   cout << "Monthly Payment:        $" << std::setw(8) << monthlyPayment << endl;
   cout << "Amount Paid Back:       $" << std::setw(8) << amountPaidBack << endl;
   cout << "Interest Paid:          $" << std::setw(8) << interestPaid << endl;
-
 
 }
