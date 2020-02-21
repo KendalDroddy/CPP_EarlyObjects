@@ -23,22 +23,22 @@ int main()
   //Get starting number and validate
   do
   {
-  std::cout << "Enter the starting number of organisms (no less than 2): ";
-  std::cin >> numberOrganisms;
+    std::cout << "Enter the starting number of organisms (no less than 2): ";
+    std::cin >> numberOrganisms;
   }while(numberOrganisms < 2);
 
   //Get number of days and validate
   do
   {
-  std::cout << "Enter the number of days they will multiply (no less than 1): ";
-  std::cin >> days;
+    std::cout << "Enter the number of days they will multiply (no less than 1): ";
+    std::cin >> days;
   }while(days < 1);
 
   //Get multiplication rate and validate
   do
   {
-  std::cout << "Enter the average daily population increase (\%): ";
-  std::cin >> rate; 
+    std::cout << "Enter the average daily population increase (\%): ";
+    std::cin >> rate; 
   }while(rate < 0);
   rate = (rate/100) + 1;
   std::cout << "Rate: " << rate << std::endl;
@@ -50,7 +50,8 @@ int main()
   //Populate table with year and worth data
   for (int i = 1; i <= days; i++)
   {
-    std::cout << std::setw(15) << i << std::setw(10) << std::fixed << std::showpoint << std::setprecision(2) << numberOrganisms << std::endl;
+    std::cout << std::setw(15) << i << std::setw(10) << std::fixed << std::showpoint 
+    << std::setprecision(2) << numberOrganisms << std::endl;
     numberOrganisms = numberOrganisms * rate;
   }
 }

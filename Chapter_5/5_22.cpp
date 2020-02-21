@@ -5,13 +5,13 @@
 **
 ** Challenge: Write a program that uses nested loops to display the 
 ** triangle pattern shown below.
-**+
-**+++ 
-**+++++ 
-**+++++++ 
-**+++++ 
-**+++
-**+
+**        +
+**        +++ 
+**        +++++ 
+**        +++++++ 
+**        +++++ 
+**        +++
+**        +
 *********************************************************************/
 #include <iostream> 
 #include <iomanip> 
@@ -40,7 +40,6 @@ int main()
     {
       crosses -= 2;
     }
-    
     std::cout << std::endl;
   }
 }
