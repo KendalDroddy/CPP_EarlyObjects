@@ -14,9 +14,11 @@
 ** display the menu again.
 *********************************************************************/
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 int main()
-{ 
+{
   //Define variables
   unsigned seed;
   int      choice,
@@ -29,13 +31,16 @@ int main()
   seed = time(0);
   srand(seed);
 
-  //Generate random numbers between 10 and 50 and solution
-  randomOne = rand() % (50 - 10 + 1) + 10;
-  randomTwo = rand() % (50 - 10 + 1) + 10;
+
 
   //Loop the entire program
   do
   {
+
+    //Generate random numbers between 10 and 50 and solution
+    randomOne = rand() % (50 - 10 + 1) + 10;
+    randomTwo = rand() % (50 - 10 + 1) + 10;
+
     //Display menu until valid choice is entered
     std::cout << "\n";
     std::cout << "Math Calculator\n";
@@ -47,14 +52,18 @@ int main()
     //Get user input
     std::cout << "Enter your choice (1 - 4): ";
     std::cin >> choice;
-    
+
+    if (choice < 1 || choice > 4){
+        std::cout << "Please try agian and enter a vaild numver";
+    }
+
     //Display problem to user only if choice is 1-3
-    if (choice > 0 && choice < 4)
+    else if (choice > 0 && choice < 4)
     {
       std::cout << "Please solve the following problem: " << std::endl;
       std::cout << " " << randomOne << std::endl;
     }
-    
+
     //Switch statement based on user input
     switch(choice)
     {
@@ -71,6 +80,7 @@ int main()
               return 0;
     }
 
+    if (choice > 1 && choice < 4){
     //Get users response and display appropriate message
     std::cout << "Enter your answer: ";
     std::cin >> userAnswer;
@@ -81,6 +91,7 @@ int main()
     else
     {
     std::cout << "The correct answer is: " << correctAnswer << std::endl;
-    } 
+    }
+    }
   }while(choice != 4);
 }
